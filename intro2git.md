@@ -1,38 +1,35 @@
 # Introduction to Git integration with Node-RED
 In this article, I will introduce Git integration functionality in Node-RED. Using Raspberry Pi devices or cloud services, many hobby users have quickly been developing their flow by just connecting nodes to realize their idea of IoT systems like home automation or RPA. To utilize these great experiences as flow developers in their job, they may consider using Node-RED for mission-critical systems. For example, these systems are factory automation and visualization dashboard in their factories, or financial backend APIs for mobile applications. However, in this case, flow developers tend to encounter the following problems with their production systems.
-Problems in flow developmentProblem 1: All functionalities exist in a single flow on a single Node-RED environment
+
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*OHoMnUUDaytPp0xkIaQ4Zw.png)
+
+## Problem 1: All functionalities exist in a single flow on a single Node-RED environment
  If only one Node-RED environment is available in the mission-critical system, the huge flow which contains many nodes will exist in this single environment. Because the single flow will use huge memory and CPU resources, it leads to performance problems. In other respects, context variables or HTTP endpoints which have the same names are sometimes conflicted due to a single environment. In terms of the Node-RED dashboard, all components according to the different applications have existed in the same dashboard UI.
-Problem 2: Who modified the Node-RED flow? When flow was modified?
+
+## Problem 2: Who modified the Node-RED flow? When flow was modified?
  In the default usage, a lot of flow developers will use a single environment simultaneously. Flow editor has user authentication for login but doesn't manage who edits the flow and when a flow developer changes it. Due to this mechanism, flow developers cannot revert the flow when the problem occurs in mission-critical systems. Furthermore, the responsibility for the serious situation will be vague.
-Problem 3: Manual flow backup and uncommon flow sharing with other developers
+
+## Problem 3: Manual flow backup and uncommon flow sharing with other developers
  To avoid loss of the flow on the flow editor, the flow developer manually backup the flow using the "exporting flow" functionality and then save it as a JSON file to their local PC in a conventional way. They need to set the file name to identify the flows but it is a time-consuming task. Additionally, it will also be difficult for other flow developers to understand the details of the flow and required modules in the case of sharing flow files because the pieces of information are written to the other files like word files by flow developers in their way.
 
 As I described above, there are a lot of concerns in flow development for production systems. If the Node-RED environment is prepared as same as the personal environment, the progress of the flow development may be a slog.
-What is Git integration?
+
+# What is Git integration?
 This functionality is known as a project feature on the Node-RED official document. Using the Git integration, flow developers can manage their flows on the flow editor as same as general code development by Git command or IDE like Visual Studio Code. In the systems development, three issues described in the previous section can be solved as follows.
-Solutions using Git integrationSolution for problem 1: Switching projects
+
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*XLcbUcW0CGWHb4dWyGv9Ag.png)
+
+## Solution for problem 1: Switching projects
  After enabling Git integration, the flow developer can select one development project from multiple projects on the flow editor. Because each project has a minimal flow only to realize one application, flow developers can solve the problems in terms of computer resources and artifact conflicts inside the flow. In my experience, I have seen a nightmare situation in that unnecessary configuration nodes remain in the flow due to sharing the flow development environment among multiple projects. Using the switching projects functionality, flow developers can avoid contamination due to the other project and proceed with a couple of flow development in different projects on the single Node-RED environment in parallel.
-Solution for problem 2: Version control of flow
+
+## Solution for problem 2: Version control of flow
  In the project created by Git integration functionality, the flow editor has the "History" tab on the sidebar area. On the tab, flow developers can manually input the commit message when the flow should be in checkpoint to record the developed flow. If the automatic mode is selected in the user setting instead of manual mode, it is also possible to add commits with the default message automatically when the flow developer clicks the deploy button. In both modes, the version-managed flow can be recovered to the previous commit which has executable flow by CLI Git operation when the latest flow doesn't work due to an error. On the single Node-RED environment, all commits are by a single user. However, if flow developers share their flow on the GitHub repository, each commit has information about the developer who modified the flow. This information will be useful to identify when and who made the mistake when solving problems in the flow.
-Solution for problem 3: Flow sharing on GitHub
+
+## Solution for problem 3: Flow sharing on GitHub
  In addition to the version control in the local repository, Node-RED has the ability to upload to the remote repository on GitHub. Using the ability, it is beneficial for the flow developer to back up the flow in preparation for the loss of the environment like a PC broken or a server down. Flow developers can also input information about how to use the flow and dependency modules to execute flows on the flow editor. The inside flow editor outputs this information to general files like README.md, and package.json files. When other flow developers download the shared flow, they can easily check the details of the application from the documentation files. And they can also install required modules by just clicking the module installation button on the flow editor. Furthermore, this functionality can be used in the automated deployment of the flow for cloud and edge devices using CI/CD pipelines like GitHub Actions.
 
-How to use Git integration
-Here, I will explain how to enable the Git integration feature on your Node-RED environment. If there's no Node-RED environment on your local PC or server on the cloud, you need to install the Node-RED based on the official document in advance.
-Prerequisite
- To utilize Git integration on Node-RED, the Git command should have been installed on your environment. In general, macOS and Linux have the Git command as the default but the Windows environment has no Git command. Therefore, Windows users need to install the Git command by the installer download from the following website.
-https://git-scm.com/downloads
-Enabling Git integration
- There are versatile ways to turn on the Git integration like environment variables and manual definition on the settings.js file. In this article, I utilize the admin command provided by the Node-RED command. To execute the admin command, please type the following command on your command prompt or terminal.
-- - - - - - - - - - - 
-node-red admin init
- - - - - - - - - - - -
-This admin command is the command-line wizard to ask questions to generate custom settings of Node-RED. Two of the question in the Projects section are related to Git integration.
-CLI wizard to configure Git integrationIn the first question to enable the project feature, select "Yes". After that, the wizard asks to select workflow mode. In this article, select the "manual" mode because this mode is the fundamental way to understand Git integration. (On the other hand, in the flow development of the production system, "auto" may be recommended to record the flow change when the flow developer clicks the deploy button because it is easy to restore the flow.) Once all questions are finished to answer, the command saves the custom configuration to the settings.js file. To start the Node-RED process using the settings.js file, type the node-red command as usual.
-- - - - - 
-node-red
- - - - - -
-Creating a new project
+
+# Creating a new project
 After opening the flow editor via the address, http://localhost:1880, you can see the wizard UI for Git integration.
 Wizard UI of Git integrationThe wizard is easy to understand because it provides step-by-step procedures to configure the Git integration settings with the details of the explanations. But select the "Open existing project" text next to the "Not right now" for simple explanations in this tutorial. The next dialog is the user settings of the Git client. This information is used on both local and remote repositories on GitHub to identify who changes the flow. Therefore, I strongly recommend that the username and e-mail address are the same as your GitHub account to avoid emerging different users on GitHub.
 User settings for Git clientThe next dialog has three options, "Open project", "Create project" and "Clone Repository". Because we need to create a new project in the first step, select "Create project" from the options. (The "Open project" options will be used to switch the project when a single Node-RED environment has multiple projects in the future. And the "Clone Repository" option is for downloading the remote project which has been uploaded on GitHub by another flow developer.)
