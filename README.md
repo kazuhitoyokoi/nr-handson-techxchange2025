@@ -4,6 +4,7 @@ Node-RED is a low-code development tool released by IBM as an open source softwa
 
 ## What is Node-RED?
 Node-RED is a low-code development tool released by IBM as an open source software. This tool is easy to use for novice users and it is also a powerful tool for IT professionals. 
+It has become a common tool in the manufacturing industry to create intelligent IoT solutions using flow-based development with low-code. 
 
 ## Setup Node-RED environment on GitHub codespaces
 
@@ -24,3 +25,5 @@ Node-RED is a low-code development tool released by IBM as an open source softwa
 ## Debugging
 
 ## Chat application with an interactive user interface and a Granite model
+
+To realize modern factory systems, Node-RED can easily connect to the devices in the factory and state-of-the-art AI such as Granite Model. 
