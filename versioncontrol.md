@@ -40,21 +40,21 @@ At this point, the initial procedure for adding the commit to the version histor
 ## (4) Modify the flow
 As an example of modifying the flow, the template node is inserted between the inject and debug nodes. To add the node to the flow, search and pick the template node from the palette, then release the node on the wire.
 
-Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*HPyB7lqW2blEaoM8.png0)
 
 When the inject node’s button is clicked in this flow, the template node creates a new message, “This is the payload: <timestamp>!”. Using the debug node, you can check this message in the debug tab.
 
 ## (5) Restore the flow
 If you are having problems with the modified flow, you may want to revert to the previous flow, which you have named “The first flow”. To revert the flow, simply click the revert arrow button with the tooltip “Revert Change” in the “Local files” section of the “Local Changes” panel.
 
-Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*HREMF-J_57pPh8ON.png)
 
 After clicking the button, the following notification dialog will appear. Of course, you should press the “Revert Changes” button in this dialog.
 
-Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*LMPpW24ZxkYR0uGb.png)
 
 The flow editor immediately reverts the flow to the previous commit. So you can see the previous flow, which only consists of the inject and debug nodes.
 
-Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*LMPpW24ZxkYR0uGb.png)
 
 As I explained above, the flow development is recoverable using Git’s integration functionality. All states of operations are stored in the persistent local filesystem. So even if you close or reload your browser, you can still recover your flow.
