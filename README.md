@@ -1,4 +1,10 @@
 # Node-RED Hands-on: Creating a Node-RED application using the project feature
+
+- How to execute Node-RED on GitHub Codespaces
+https://kazuhitoyokoi.medium.com/how-to-execute-node-red-on-github-codespaces-3a180d3a2561
+
+
+
 ## Abstruct
 Node-RED is a low-code development tool released by IBM as an open source software. This tool is easy to use for novice users and it is also a powerful tool for IT professionals. Node-RED supports debugging, linting, and Git version control for the professional use. In this hands-on session, I will introduce these features and show how to use them effectively. As an application example, we will develop a chat application with an interactive user interface and a Granite model in the background model. Participants will learn how to set up the Node-RED environment and create flows from scratch. Through this hands-on experience, participants will learn the development techniques using Node-RED, including best practices for managing flows and using version control to track changes.
 
