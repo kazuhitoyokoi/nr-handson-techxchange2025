@@ -57,9 +57,21 @@ It has become a common tool in the manufacturing industry to create intelligent 
 
 ---
 # Flow Linter
+Provides real-time feedback same as code linter
+
+- Supprted potential issues:
+  - Overlapping nodes
+  - Looping flows
+  - Unset node names
+  - http-in node without http-response node
 
 ---
 # Flow Debugger
+Provides same user experience as code debugger
+- Creating breakpoints 
+- Pausing flows
+- Inspecting messages
+- Step by step execution
 
 ---
 # Chat application with an interactive user interface and a Granite model
