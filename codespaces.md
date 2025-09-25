@@ -1,14 +1,17 @@
 # How to execute Node-RED on GitHub Codespaces
+In this article, I will introduce how to execute Node-RED on GitHub Codespacesas one of the Web IDE environments.
 
-How to execute Node-RED on GitHub Codespaces
-In the world, there are a lot of Node-RED services like FlowForge, Siemens MindSphere, Prescient Devices, and krysp.io. If you're familiar with the method to deploy software code to the cloud, you can also use PaaS or Web IDE environments to execute the Node-RED flow editor. In this article, I will introduce how to execute Node-RED on GitHub Codespacesas one of the Web IDE environments.
-What is GitHub Codespaces?
+# What is GitHub Codespaces?
  GitHub Codespases is the Web IDE integrated with GitHub and you can use it using your GitHub account. Currently, all users are able to use the Codespases environment for 60 hours a month for free. And we can use 2 CPUs, 4 GB memory, and 32 GB storage for the period. It is suitable not only for code development but also for temporary application execution like Node-RED.
-Procedures to execute Node-RED on Codespaces
+
+# Procedures to execute Node-RED on Codespaces
  I prepared the Codespaces template for Node-RED on the GitHub repository.
-GitHub - kazuhitoyokoi/node-red-codespaces
+
+https://github.com/kazuhitoyokoi/node-red-codespaces
+
 This repository is the template to create the Node-RED environment on GitHub Codespases. Using the Codespases, you can…github.com
 The followings are step-by-step procedures about how to use this template.
+
 1. Create your GitHub account
  If you have no GitHub account, create your GitHub account from the following URL.
 
