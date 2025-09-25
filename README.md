@@ -1,7 +1,6 @@
 # Node-RED Hands-on: Creating a Node-RED application using the project feature
 
-- How to execute Node-RED on GitHub Codespaces
-https://kazuhitoyokoi.medium.com/how-to-execute-node-red-on-github-codespaces-3a180d3a2561
+- [How to execute Node-RED on GitHub Codespaces](codespaces.md)
 
 
 
