@@ -23,4 +23,4 @@ Node-RED is a low-code development tool released by IBM as an open source softwa
 
 ## Debugging
 
-# Chat application with an interactive user interface and a Granite model
+## Chat application with an interactive user interface and a Granite model
