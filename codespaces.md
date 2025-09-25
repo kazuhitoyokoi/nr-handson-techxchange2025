@@ -36,6 +36,8 @@ By this setting change, you can use the Node-RED flow editor for four hours. Aft
 
  When accessing the Node-RED template repository, you can see the green button, "Use this template" in the top-right corner. After clicking the button, two options emerge to be able to select. Here, select "Open in a codespace" to open the template repository on the Codespaces.
 
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*RcSsE8ol_J9aLdx8OeuZSw.png)
+
 ## 4. Open Node-RED flow editor
 
  After about one minute, this environment will automatically download Node-RED and then start up. When the Node-RED flow editor is ready to use, the dialog will be pop-up in the bottom-right corner.
