@@ -25,7 +25,7 @@ To register for the account, you need to input your information like your e-mail
  As the default, the environment prepared by Codespaces will be terminated in 30 minutes. Because this period is too short to develop Node-RED flows, extend the timeout from the user's settings URL.
 
 https://github.com/settings/codespaces#default-idle-timeout-header
- 
+
  In the text input area, type the maximum value, 240 minutes.
 
 ![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*cjPrDKd_EftXOdluDPjkIA.png)
