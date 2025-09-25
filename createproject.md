@@ -27,4 +27,4 @@ At the bottom of the "Create project" button, there are four settings as follows
 
 - Credential
 
-   The final setting is to select whether the credential of the flow should be encrypted by an encryption key or not. Because this tutorial uses a local repository on your local PC or a remote repository created as a private mode on GitHub, encryption is not needed. Therefore, select the bottom option, "Disable encryption". (When publishing the flow with credentials to a public repository on GitHub, it should be "Enable encryption" to protect confidential information.)
+  The final setting is to select whether the credential of the flow should be encrypted by an encryption key or not. Because this tutorial uses a local repository on your local PC or a remote repository created as a private mode on GitHub, encryption is not needed. Therefore, select the bottom option, "Disable encryption". (When publishing the flow with credentials to a public repository on GitHub, it should be "Enable encryption" to protect confidential information.)
