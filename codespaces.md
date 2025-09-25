@@ -41,5 +41,11 @@ By this setting change, you can use the Node-RED flow editor for four hours. Aft
 ## 4. Open Node-RED flow editor
 
  After about one minute, this environment will automatically download Node-RED and then start up. When the Node-RED flow editor is ready to use, the dialog will be pop-up in the bottom-right corner.
+
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*s5NuxzW8R6fKg0NW2EGuug.png)
+
 After clicking the green button, "Open in browser", another tab on your browser will be opened for the Node-RED flow editor. At the first, the dialog for the project feature will be opened in this environment. To skip the project configuration, click the "Not right now" button in the bottom-right corner.
+
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*da7loI9f8EhfKPLFgWjCGw.png)
+
 Now, you can start to develop great flows in the Node-RED flow editor.
