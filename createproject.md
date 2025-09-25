@@ -14,16 +14,16 @@ User settings for Git clientThe next dialog has three options, "Open project", 
 At the bottom of the "Create project" button, there are four settings as follows.
 - Project name
 
- This is the project name for the local repository. To consider the situation that it will be used for the part of the URL on GitHub after uploading flow to the remote repository in the future, the length of the project name should be as short as possible. In general, the characters in the project name should also be lower cases or numbers with hyphens as delimiters. In this article, I inputted "test" as the project name.
+  This is the project name for the local repository. To consider the situation that it will be used for the part of the URL on GitHub after uploading flow to the remote repository in the future, the length of the project name should be as short as possible. In general, the characters in the project name should also be lower cases or numbers with hyphens as delimiters. In this article, I inputted "test" as the project name.
 
 - Description
 
- It is an optional setting to input the description of the created project. You can write the text in the natural language.
+  It is an optional setting to input the description of the created project. You can write the text in the natural language.
 
 - Flow file
 
- This is also an optional setting to specify the flow file name. But there is no reason why the flow developer changes the name in the single flow file. Remain the default name, "flow.json".
+  This is also an optional setting to specify the flow file name. But there is no reason why the flow developer changes the name in the single flow file. Remain the default name, "flow.json".
 
 - Credential
 
- The final setting is to select whether the credential of the flow should be encrypted by an encryption key or not. Because this tutorial uses a local repository on your local PC or a remote repository created as a private mode on GitHub, encryption is not needed. Therefore, select the bottom option, "Disable encryption". (When publishing the flow with credentials to a public repository on GitHub, it should be "Enable encryption" to protect confidential information.)
+  The final setting is to select whether the credential of the flow should be encrypted by an encryption key or not. Because this tutorial uses a local repository on your local PC or a remote repository created as a private mode on GitHub, encryption is not needed. Therefore, select the bottom option, "Disable encryption". (When publishing the flow with credentials to a public repository on GitHub, it should be "Enable encryption" to protect confidential information.)
