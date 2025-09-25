@@ -13,3 +13,10 @@ CLI wizard to configure Git integrationIn the first question to enable the proje
 - - - - - 
 node-red
  - - - - -
+
+
+Checking Git log
+If you're familiar with Git CLI operation, you may be interested in the status of the local repository. To show the Git log on the command prompt or terminal, firstly change the working directory to the path of the local repository, "~/.node-red/projects/test" on macOS and Linux, "C:¥Users¥<User name>¥.node-red¥projects¥test" on Windows. After this operation, type the "git log" command to show the version history to the command prompt or terminal.
+The output of the git log commandAs you can see in the above screenshot, the git history by CLI is shown as the same as the history tab on the flow editor.
+Conclusion
+In this article, I briefly explained the Git integration on Node-RED which is necessary functionality in the flow development of the mission-critical system. Leading companies have already used Git integrations in their mission-critical systems. For instance, Siemens has used this functionality in their product, Industrial Edge Flow Creator. If you're interested in the details of the procedures, you can read the documentation of this product. As another example, Red Hat has also adopted this Git integration in their Node-RED operator for Red Hat OpenShift as the default. With the expansion of usage in production, Git integration will become crucial and standard development among Node-RED users.
