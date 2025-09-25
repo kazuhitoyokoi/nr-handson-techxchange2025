@@ -1,37 +1,39 @@
 # Using version control for Node-RED flows
 
+In this article, I will introduce version control of Node-RED flows using the Git integration functionality. This version control functionality is the core of Git integration with Node-RED, as the Git command is used within Node-RED to record version history. Even flow developers who are not familiar with Git commands, such as factory engineers, can easily use this functionality because it is available through the Node-RED flow editor interface.
+
 ## (1) Create your first flow
 In this tutorial, we will use the simplest flow consisting of inject and debug nodes. After placing these nodes in the central workspace, create the wire between the nodes. Then press the deploy button to run the flow on the Node-RED backend server.
 
-Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*QElp-A9hrsLr4sht.png)
 
 When you click the inject node’s left button, the inject node triggers the message to the wire. From the wire, the debug node connected to the inject node outputs the received timestamp number to the debug tab of the sidebar.
 
 ## (2) Change the status of the flow file to the staging
 The next step is to change the status of the first flow to staging. The staging state is the Git principle equivalent of “git add” to select files that should be committed to the version. Once the files are ready to commit, you make the record with the message, timestamp, and developer information in the case of the general step. In another case, we can also restore the flow to the previous state. In the next step, we will try both procedures to perform the commit after changing the flow status to staging and then restore the previous flow. On the History tab, there are two sections, “Local Changes” and “Commit History”, as you can see in the screenshot.
 
-Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*7jHnviAQDiH0fF8j.png)
 
 The Local Changes section is used to manipulate the local flow and associated files to add and remove them from the history. (“Commit History” is an area to check the recorded history. I will explain it later). In addition, the “Local Changes” section is divided into “Local files” and “Changes to commit”. In the next step, we will use the Local Changes section first.
 
-Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*-7zq9NLI3rs8y0um.png)
 
 Click the plus button on the flow file that has the “Stage change” tooltip. Clicking the plus button changes the status of the flow file to staging status and moves the flow file to the “Changes to commit” section, which means it is ready for commit.
 
 ## (3) Commit the change with a message
 The next step is to use the “Changes to commit” section. To commit to history with a specific message, click the “Commit” button in this section.
 
-Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*4qSVjqixr7sFL7KH.png)
 
 This will bring up the text area at the bottom of the section, where you can enter your commit message. As an example message, I typed “The first flow” into the area and then clicked the “Commit” button at the bottom of the text area.
 
-Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*0nCzUABXCyLbuCj2.png)
 
 If you’re familiar with the Git command, it might be easier to explain that “git commit -m <message>” was executed internally.
 
 It deletes all working files from both sections within the “Local Changes”. This means that the file is recorded in the version history. When you open the “Commit History” section, there is a version history that includes the commit that was made.
 
-Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*-ULWY4tiMcJwSz9f.png)
 
 At this point, the initial procedure for adding the commit to the version history is complete. As the next step, I will modify the flow and return it to the state of “The first flow”.
 
