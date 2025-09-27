@@ -126,15 +126,22 @@ https://github.com/operasoftware/opera-smart-home
 ---
 ## Advanced feature
 Features to improve developer experiences
-- Git version control
+- Project feature (Git functionality)
 - Flow Linter
 - Flow Debugger
 Siemens, Red Hat and Hitachi have used these features.
 
 ---
-# Git version control
+# Issues without project feature
+We encounter the following issues in default setting.
+
+---
+# Solution with project feature
+
 - managing flows
 - tracking changes
+
+
 
 ---
 # Flow Linter
