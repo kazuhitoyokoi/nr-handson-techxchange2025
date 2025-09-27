@@ -1,7 +1,7 @@
 # Introduction to Git integration with Node-RED
 In this material, I will introduce Git integration functionality in Node-RED. Using Raspberry Pi devices or cloud services, many hobby users have quickly been developing their flow by just connecting nodes to realize their idea of IoT systems like home automation or RPA. To utilize these great experiences as flow developers in their job, they may consider using Node-RED for mission-critical systems. For example, these systems are factory automation and visualization dashboard in their factories, or financial backend APIs for mobile applications. However, in this case, flow developers tend to encounter the following problems with their production systems.
 
-![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*OHoMnUUDaytPp0xkIaQ4Zw.png)
+![](images/issues.webp)
 
 ## Problem 1: All functionalities exist in a single flow on a single Node-RED environment
  If only one Node-RED environment is available in the mission-critical system, the huge flow which contains many nodes will exist in this single environment. Because the single flow will use huge memory and CPU resources, it leads to performance problems. In other respects, context variables or HTTP endpoints which have the same names are sometimes conflicted due to a single environment. In terms of the Node-RED dashboard, all components according to the different applications have existed in the same dashboard UI.
@@ -17,7 +17,7 @@ As I described above, there are a lot of concerns in flow development for produc
 # What is Git integration?
 This functionality is known as a project feature on the Node-RED official document. Using the Git integration, flow developers can manage their flows on the flow editor as same as general code development by Git command or IDE like Visual Studio Code. In the systems development, three issues described in the previous section can be solved as follows.
 
-![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*XLcbUcW0CGWHb4dWyGv9Ag.png)
+![](images/solution.webp)
 
 ## Solution for problem 1: Switching projects
  After enabling Git integration, the flow developer can select one development project from multiple projects on the flow editor. Because each project has a minimal flow only to realize one application, flow developers can solve the problems in terms of computer resources and artifact conflicts inside the flow. In my experience, I have seen a nightmare situation in that unnecessary configuration nodes remain in the flow due to sharing the flow development environment among multiple projects. Using the switching projects functionality, flow developers can avoid contamination due to the other project and proceed with a couple of flow development in different projects on the single Node-RED environment in parallel.

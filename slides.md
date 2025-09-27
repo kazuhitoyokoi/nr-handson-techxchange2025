@@ -115,7 +115,7 @@ https://github.com/operasoftware/opera-smart-home
 
 ![h:400 bg right:50%](images/opera.png)
 
---
+---
 
 
 ---
@@ -127,6 +127,9 @@ https://github.com/operasoftware/opera-smart-home
 ## Advanced feature
 Features to improve developer experiences
 - Project feature (Git functionality)
+  - managing flows
+  - tracking changes
+
 - Flow Linter
 - Flow Debugger
 Siemens, Red Hat and Hitachi have used these features.
@@ -135,11 +138,13 @@ Siemens, Red Hat and Hitachi have used these features.
 # Issues without project feature
 We encounter the following issues in default setting.
 
+![h:400](images/issues.webp)
+
 ---
 # Solution with project feature
 
-- managing flows
-- tracking changes
+![h:400](images/solution.webp)
+
 
 
 
@@ -152,6 +157,8 @@ Provides real-time feedback same as code linter
   - Looping flows
   - Unset node names
   - http-in node without http-response node
+
+![h:600 bg right:50%](images/flowlinter.png)
 
 ---
 # Flow Debugger
