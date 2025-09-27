@@ -3,10 +3,10 @@ marp: true
 theme: default
 paginate: true
 ---
-![bg cover](title4handson.png)
+![bg cover](images/title4handson.png)
 
 ---
-![bg cover](title4session.png)
+![bg cover](images/title4session.png)
 
 ---
 
@@ -15,40 +15,121 @@ paginate: true
 - Core contributor of Node-RED project
 - Organizer of Node-RED User Group
 - Member of LF AI & Data Foundation Community
-![h:400 bg right:50%](https://nodered.jp/images/yokoi.jpg)
+
+https://openjsf.org/blog/node-red-unleashed
+
+![h:100% bg right:46%](images/openjsf.png)
 
 ---
 ## What is Node-RED?
-Node-RED is a low-code development tool
+Low-code development tool from novice users to IT professionals
+
 - Released by IBM as an open source software
 - Hosted by the OpenJS Foundation
-![h:400 bg right:50%](https://camo.githubusercontent.com/fd858c2c9103ef598aff5ca1f4c818d912093009a94879b7d4a90e8357f7a421/68747470733a2f2f6e6f64657265642e6f72672f696d616765732f6e6f64652d7265642d73637265656e73686f742e706e67)
+- Used in manufacturing industry to realize industrial IoT
+
+![h:400 bg right:50%](images/floweditor.png)
 
 ---
 # Node-RED statistics
+Node-RED has been widely used for 10 years.
 - 155 releases
-- 9802 commits
+- 9,802 commits
 - 237 contributors
 - 22k GitHub stars
-- 5562 community nodes
-- 1M monthly Docker pulls
-- 100k monthly NPM downloads
-![h:400 bg right:50%](npmstat.png)
+- 3B+ Docker pulls
+- 5,562 community nodes
+![h:400 bg right:50%](images/npmstat.png)
 
 ---
-# 
-This tool is easy to use for novice users and it is also a powerful tool for IT professionals. 
-It has become a common tool in the manufacturing industry to create intelligent IoT solutions using flow-based development with low-code. 
+# Supported Envionments
+Node-RED supports environments that can run Node.js.
+- Local PC
+  - Windows
+  - macOS
+  - Ubuntu
+- Docker
+- Raspberry Pi
+- Cloud
+![h:560 bg right:48%](images/environment.png)
+
+---
+# How to install
+- Local environment
+```
+sudo npm install -g --unsafe-perm node-red
+node-red
+```
+- Docker
+```
+docker run -it -p 1880:1880 --name
+mynodered nodered/node-red
+```
+- Raspberry Pi
+```
+bash <(curl -sL
+https://raw.githubusercontent.com/node-red/linuxinstallers/master/deb/update-nodejs-and-nodered)
+```
+---
+# Node-RED nodes
+Many predefined and custom connectors for services and devices
+- Data collection
+- Machine control
+- External server access
+- Database connection
+- Data analysis
+- Visualization
+
+![h:540 bg right:57%](images/library.png)
+
+---
+# Pre-installed Devices
+Many devices equip Node-RED as a pre-installed software.
+- Seeed Studio, reTerminal DM, reCamera
+- Advantech, ADAM-6700
+- ADLINK, Vizi-AI Devkit
+- QNAP, QIoT Suite
+- Emerson, PACEdge
+
+![h:400 bg right:57%](images/recamera.png)
+
+---
+# GAIA-X Federation Services
+OSS set for data exchange between companies
+- Hosted by the Eclipse Foundation from 2023
+- GXFS Workflow Engine based on Node-RED
+
+https://github.com/eclipse-xfsc/orchestration-engine
+
+![h:400 bg right:57%](images/orchestration-engine.jpg)
+
+---
+# Opera Browser
+Opera Software adopted Node-RED for their browser, Opera GX
+
+- Realized smart home use cases
+  - Getting your room ready for watching movies
+  - Syncing the colors of smart bulbs with the theme of Opera GX
+
+https://github.com/operasoftware/opera-smart-home
+
+![h:400 bg right:50%](images/opera.png)
+
+--
+
 
 ---
 ## Setup Node-RED environment on GitHub codespaces
 
 ## Simple demonstration
 
+---
 ## Advanced feature
+Features to improve developer experiences
 - Git version control
-- Linting
-- Debugging
+- Flow Linter
+- Flow Debugger
+Siemens, Red Hat and Hitachi have used these features.
 
 ---
 # Git version control
