@@ -146,8 +146,6 @@ We encounter the following issues in default setting.
 ![h:400](images/solution.webp)
 
 
-
-
 ---
 # Flow Linter
 Provides real-time feedback same as code linter
