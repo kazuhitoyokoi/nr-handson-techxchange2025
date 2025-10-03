@@ -22,7 +22,9 @@ It has become a common tool in the manufacturing industry to create intelligent 
 ## Advanced feature
 - Git version control
 - Linting
+https://qiita.com/k-toumura/items/37f23c9fe43fe16453bb
 - Debugging
+https://qiita.com/HiroyasuNishiyama/items/5a416762fb0024b7e403
 
 ## Git version control
 - managing flows
