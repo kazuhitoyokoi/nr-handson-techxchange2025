@@ -9,7 +9,6 @@ paginate: true
 ![bg cover](images/title4session.png)
 
 ---
-
 # Self-introduction
 - Kazuhito Yokoi
 - Core contributor of Node-RED project
