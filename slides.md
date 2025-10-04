@@ -4,12 +4,9 @@ theme: default
 paginate: true
 ---
 ![bg cover](images/title4handson.png)
----
-![bg cover](images/title4session.png)
 
 ---
-# Self-introduction
-- Kazuhito Yokoi
+# Kazuhito Yokoi
 - Core contributor of Node-RED project
 - Organizer of Node-RED User Group
 - Member of LF AI & Data Foundation Community
@@ -103,9 +100,7 @@ https://github.com/eclipse-xfsc/orchestration-engine
 
 ---
 # Opera Browser
-Opera Software adopted Node-RED for their browser, Opera GX
-
-- Realized smart home use cases
+Opera Software adopted Node-RED for their browser, Opera GX for smart home use cases
   - Getting your room ready for watching movies
   - Syncing the colors of smart bulbs with the theme of Opera GX
 
@@ -114,23 +109,13 @@ https://github.com/operasoftware/opera-smart-home
 ![h:400 bg right:50%](images/opera.png)
 
 ---
-
-
----
-## Setup Node-RED environment on GitHub codespaces
-
-## Simple demonstration
-
----
-## Advanced feature
+## Advanced features
 Features to improve developer experiences
 - Project feature (Git functionality)
-  - managing flows
-  - tracking changes
-
+  - Managing flows
+  - Tracking changes
 - Flow Linter
 - Flow Debugger
-Siemens, Red Hat and Hitachi have used these features.
 
 ---
 # Issues without project feature
@@ -140,21 +125,23 @@ We encounter the following issues in default setting.
 
 ---
 # Solution with project feature
+Project feature solves the previous issues.
 
 ![h:400](images/solution.webp)
-
 
 ---
 # Flow Linter
 Provides real-time feedback same as code linter
 
 - Supprted potential issues:
-  - Overlapping nodes
-  - Looping flows
-  - Unset node names
   - http-in node without http-response node
+  - Looping flows
+  - Overlapping nodes
+  - Unset node names
+- Custom rules:
+  - Recommendation of English node names
 
-![h:600 bg right:50%](images/flowlinter.png)
+![h:600 bg right:40%](images/flowlinter.png)
 
 ---
 # Flow Debugger
@@ -164,13 +151,18 @@ Provides same user experience as code debugger
 - Inspecting messages
 - Step by step execution
 
----
-# Chat application with an interactive user interface and a Granite model
-
-To realize modern factory systems, Node-RED can easily connect to the devices in the factory and state-of-the-art AI such as Granite Model. 
+<!-- TODO: injectとdebugでフローデバッガ設定の画面 -->
+![h:600 bg right:40%](images/debugger.png)
 
 ---
 # Conclusion
+- We learned the advanced features of Node-RED
+  - Project feature 
+  - Flow linter
+  - Flow debugger
+- Development example of Chat UI application
+
+-> I believe that you will develop the great flows using these features and example.
 
 ---
 # Node-RED Conference 2025
@@ -180,4 +172,17 @@ To realize modern factory systems, Node-RED can easily connect to the devices in
 - Registration: Free
 https://nrcon.nodered.org/
 
-![h:380 bg right:41%](nrcon.png)
+![h:380 bg right:40%](images/nrcon.png)
+
+---
+![bg cover](images/title4session.png)
+
+---
+## Setup Node-RED environment on GitHub codespaces
+
+## Simple demonstration
+
+---
+# Chat application with an interactive user interface and a Granite model
+
+To realize modern factory systems, Node-RED can easily connect to the devices in the factory and state-of-the-art AI such as Granite Model. 

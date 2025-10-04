@@ -1,6 +1,6 @@
 # Using version control for Node-RED flows
 
-In this article, I will introduce version control of Node-RED flows using the Git integration functionality. This version control functionality is the core of Git integration with Node-RED, as the Git command is used within Node-RED to record version history. Even flow developers who are not familiar with Git commands, such as factory engineers, can easily use this functionality because it is available through the Node-RED flow editor interface.
+In this material, I will introduce version control of Node-RED flows using the Git integration functionality. This version control functionality is the core of Git integration with Node-RED, as the Git command is used within Node-RED to record version history. Even flow developers who are not familiar with Git commands, such as factory engineers, can easily use this functionality because it is available through the Node-RED flow editor interface.
 
 ## (1) Create your first flow
 In this tutorial, we will use the simplest flow consisting of inject and debug nodes. After placing these nodes in the central workspace, create the wire between the nodes. Then press the deploy button to run the flow on the Node-RED backend server.
