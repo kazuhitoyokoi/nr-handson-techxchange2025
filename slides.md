@@ -4,7 +4,6 @@ theme: default
 paginate: true
 ---
 ![bg cover](images/title4handson.png)
-
 ---
 ![bg cover](images/title4session.png)
 
