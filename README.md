@@ -3,8 +3,10 @@
 ## Preparations
 - [How to execute Node-RED on GitHub Codespaces](https://github.com/kazuhitoyokoi/node-red-codespaces)
 
-## Hands-on materials
+## Introduction
 - [Introduction to Git integration with Node-RED](intro2git.md)
+
+## Hands-on materials
 - [Creating a new project](createproject.md)
 - [Using version control for Node-RED flows](versioncontrol.md)
 - [Creating Chat application](chatapp.md)
