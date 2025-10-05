@@ -64,9 +64,18 @@ return msg;
 ![](images/function4ollama.png)
 
 For http request node, the following settings are needed to select or input on the node property UI.
-- Method: POST
-- URL: http://localhost:11434/v1/chat/completions
-- Return: a parsed JSON object
+- Method:
+```
+POST
+```
+- URL:
+```
+http://localhost:11434/v1/chat/completions
+```
+- Return:
+```
+a parsed JSON object
+```
 
 ![](images/httprequest.png)
 
