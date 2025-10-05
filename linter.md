@@ -3,7 +3,7 @@ A code linter is a common feature in the programming to check for potential erro
 
 # Linter Rules
 ## function-eslint
-To observe Flow Linter's behaviors in a function node, place a function node and write the following code in the node property of the function node.
+To observe Flow Linter's behavior in a function node, place a function node and write the following code in the node property of the function node.
 
 ```
 let a;
@@ -22,12 +22,12 @@ In flow-based development, developers sometimes create loops in the flow. This i
 ![](images/nrlint-loop.png)
 
 ## no-overlapping-nodes
-There is another issue in flow-based development. When developers place the nodes in the workspace, they sometimes put one node on the another node. In this case, the node behind the other node is not visible. The Flow Linter shows a warning message, "Overlapping nodes" on the linter tab in this situation.
+There is another issue in flow-based development. When developers place the nodes in the workspace, they sometimes put one node on the another node. In this case, the node behind the other node is not visible. In this situation, the Flow Linter shows a warning message, "Overlapping nodes" on the linter tab.
 
 ![](images/nrlint-overlapping.png)
 
 ## no-unconnected-http-nodes
-In the Node-RED flow editor, a pair of http-in and http response nodes is used to define an HTTP endpoint. If only an http-in node is used in the flow, the HTTP client cannnot receive the response from the HTTP request. To notify the missing pair, the linter tab displays the following messages.
+In the Node-RED flow editor, a pair of http-in and http response nodes is used to define an HTTP endpoint. If only an http-in node is used in the flow, the HTTP client cannot receive the response from the HTTP request. To notify developers of the missing pair, the linter tab displays the following messages.
 
 ![](images/nrlint-httpinresponse.png)
 
