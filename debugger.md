@@ -7,21 +7,25 @@ As the default, flow debugger is disabled in flow editor. Therefore, developer n
 
 ![](images/enabling-debugger.png)
 
-## Setting breakpoint
+## Setting break point
 After enabling the flow debugger, you can add the break points on the ports of the nodes. Once mouse pointer cover the port, you can see the shadow of the break point.
 
 ![](images/breakpoint.png)
 
-After clicking the shadow, the break point is successfully added to the port. You can see the assigned breakpoints on the debugger tab.
+After clicking the shadow, the break point is successfully added to the port. You can see the assigned break points on the debugger tab.
 
 ![](images/breakpoint2.png)
 
 ## Stopping flow
-Once start 
+Once start the flow, the flow execution will be stopped at the break point. You can see the message payload in the debugger tab.
 
 ![](images/stoppingflow.png)
 
+After checking the message payload, you can click the "Resume flow" button to continue the flow execution.
 
 ![](images/restartflow.png)
 
+If you click the "step flow" button next to the "Resume flow" button, the messsage will be sent to the next node on by one.
+
 # Conclusion
+This tutorial explained how to use the flow debugger. Without flow debugger, developers tends to use the debug node to check the message payload. However, using debug node requires to change the flow. Therfore, undo and redo are little bit troublesome. In terms of the git version history, commit of placing debug node in the flow is not related to the flow logic. Using flow debugger, developers can check the message payload without changing the flow.
