@@ -85,6 +85,10 @@ To create simple Chat UI, place the text input node, function node and green tem
 
 ![](images/flow4simplechatui.png)
 
+On the property UI of the text input node, "Focus leave" checkbox should be turned off because Chat UI unintentionally sends to the request answer from Ollama server when switching the browser pages between dashboard UI page and Node-RED flow editor page.
+
+![](images/focusleave.png)
+
 Only name of the function node was changed to "user comment" to distinguish with other function node created later. In the function node, paste the following code.
 
 ```
