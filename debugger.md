@@ -5,16 +5,23 @@ Flow debugger provides the same developer expriences on Node-RED flow editor. Th
 ## Enabling debugger
 As the default, flow debugger is disabled in flow editor. Therefore, developer need to open the debugger tab on the right side bar and turn on the debugger by clicking the switch.
 
-<!-- TODO: enableにする画像を追加 -->
+![](images/enabling-debugger.png)
 
 ## Setting breakpoint
-
 After enabling the flow debugger, you can add the break points on the ports of the nodes. Once mouse pointer cover the port, you can see the shadow of the break point.
 
-<!-- TODO: 数い青色のブレイクポイント -->
+![](images/breakpoint.png)
 
-After clicking the shadow, the break point is successfully added to the port.
+After clicking the shadow, the break point is successfully added to the port. You can see the assigned breakpoints on the debugger tab.
 
-<!-- TODO: 青色のブレイクポイント済のフロー -->
+![](images/breakpoint2.png)
 
 ## Stopping flow
+Once start 
+
+![](images/stoppingflow.png)
+
+
+![](images/restartflow.png)
+
+# Conclusion
