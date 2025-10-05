@@ -1,4 +1,4 @@
-# Using debugger
+# Flow Debugger
 A code debugger is also common tool in general programming languages. When using Visual Studio Code for Python programming, we set the breakpoints in the line of code. We can investigate the variables at these breakpoints while the code is executing.
 The flow debugger provides the same developer exprience for Node-RED flow editor. This tutorial explains how to use the flow debugger.
 
