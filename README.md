@@ -10,5 +10,5 @@
 - [Creating a new project](createproject.md)
 - [Using version control for Node-RED flows](versioncontrol.md)
 - [Creating Chat application](chatapp.md)
-- [Using Linter](linter.md)
-- [Using Debugger](debugger.md)
+- [Flow Linter](linter.md)
+- [Flow Debugger](debugger.md)
