@@ -47,7 +47,7 @@ Type the message, "What is IBM? Describe it in 10 words."
 
 ![](images/inject4ollama.png)
 
-In the function node, input "post data" to the name field and paste the follwoing code to set POST message and URL to access Ollama server.
+In the function node, input "post data" to the name field and paste the follwoing code to set POST message for Ollama server.
 
 ```
 msg.payload = {
