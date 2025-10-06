@@ -1,6 +1,6 @@
 # Chat Application with an Interactive User Interface and a Granite Model
 
-Node-RED can easily connect to state-of-the-art AI technologies such as the Granite Model. In this tutorial, we will develop a chat application with an intractive user interface and a Granite Model.
+Node-RED can easily connect to state-of-the-art AI technologies, such as the Granite Model. In this tutorial, we will develop a chat application with an interactive user interface and a Granite Model.
 <!--
 ## Installing Ollama (Not required in hands-on)
 To use Granite Model with Node-RED, firstly you need to install Ollama, a HTTP server to provide APIs to use AI models. To install Ollama in the Linux environment, input the following command on your terminal.
@@ -31,18 +31,18 @@ Select "Install" tab, to open the for the node installation. After typing the `@
 After the installation, you can see the dashboard nodes on the left palette of the Node-RED flow editor.
 -->
 ## Creating a Node-RED Flow
-First, create a new project, "chat-app" using the project featue.
+First, create a new project, "chat-app" using the project feature.
 
 ![](images/createchatapp.png)
 
-After creating the new project for the chat application, you can then start developing the Node-RED flow.
+After creating the new project, you can then start developing the Node-RED flow for the chat application.
 
-### Creating Node-RED flow to access Ollama server
-To create a simple flow to access the Ollama server, place the inject, function, http request and debug node with wires as shown below.
+### Creating Node-RED Flow to Access an Ollama Server
+To create a simple flow to access the Ollama server, place the inject, function, http request and debug nodes with wires as shown below.
 
 ![](images/flow4ollama.png)
 
-Double-click the inject node to open the node property UI. To set the prompt for the Ollama server, click the time icon next to "millisecounds since epoch" to open the data type pull-down menu. For the data type of `msg.payload`, select `string` from the menu. Then, type the string message, "What is IBM? Describe it in 10 words." in the text input box next to az icon.
+Double-click the inject node to open the node property UI. To set the prompt for the Ollama server, click the time icon next to "millisecounds since epoch" to open the data type dropdown menu. For the data type of `msg.payload`, select `string` from the menu. Then, type the string message, "What is IBM? Describe it in 10 words." in the text input box next to the `az` icon.
 
 ![](images/inject4ollama.png)
 
@@ -62,7 +62,7 @@ return msg;
 ```
 ![](images/function4ollama.png)
 
-For http request node, the following settings are needed to be selected or inputted on the node property UI.
+For the http request node, select or input the following settings on the node property UI.
 - Method: POST
 - URL:
   ```
@@ -72,23 +72,23 @@ For http request node, the following settings are needed to be selected or input
 
 ![](images/httprequest.png)
 
-The debug node's node property settings are default. After clicking the deploy button, you can access the Ollama server by clicking the inject node's left button.
+The debug node's node property settings are the default settings. After clicking the deploy button, you can access the Ollama server by clicking the inject node's left button.
 
 ![](images/whatisibm.png)
 
-To check the response from the Ollama server, expand the received message in the debug tab. You will se the answer in the JSON path of `payload.choices[0].message.content`.
+Expand the received message in the debug tab to check the response from the Ollama server. The answer will be in the JSON path of `payload.choices[0].message.content`.
 
 ## Creating a Simple Chat UI
-Node-RED dashboard supports the Vuetify UI in the template node. In this material, we use the timeline UI provided by Vuetify to show Chat UI.
-To create a simple chat UI, place a text input node, a function node and a green template node in Dashboardd 2.0 category, connecting them with wires as shown below.
+The Node-RED dashboard supports the Vuetify UI in the template node. In this material, we use the timeline UI provided by Vuetify to show Chat UI.
+To create the chat UI, place a text input node, a function node, and a green template node in the Dashboard 2.0 category. Connect them with wires as shown below.
 
 ![](images/flow4simplechatui.png)
 
-In the property UI of the text input node, the "Focus leave" checkbox should be unchecked because the chat UI unintentionally sends to a request to the Ollama server for an answer when switching between the dashboard UI page andthe  Node-RED flow editor page.
+In the property UI of the text input node, uncheck the "Focus leave" checkbox because the chat UI unintentionally sends to a request to the Ollama server for an answer when switching between the dashboard UI page and the  Node-RED flow editor page.
 
 ![](images/focusleave.png)
 
-The function node name was changed to "user comment" to distinguish it from other function nodes created later. In the function node, paste the following code.
+The function node name was changed to "user comment" to distinguish it from other function nodes that will be created later. In the function node, paste the following code.
 
 ```
 var tmp = flow.get('data') || [];
@@ -120,30 +120,30 @@ In the template node, replace the existing code with the following code to displ
 </template>
 ```
 
-Additionally, on the template node property UI, the group should be changed to "[Page 1] Group 1" because default selection is none.
+Additionally, on the template node property UI, the group should be changed to "[Page 1] Group 1" because the default selection is "none".
 
 ![](images/template4chatui.png)
 
-To show the chat UI on the Node-RED Dashbaord 2.0, click the deploy button and select the "Dashboard 2.0" tab in the right side bar area. Then, click the "Open Dashboard" button in the top right corner.
+To show the chat UI on the Node-RED Dashboard 2.0, click the deploy button and then select the "Dashboard 2.0" tab in the right sidebar. Then, click the "Open Dashboard" button in the top right corner.
 
 ![](images/button2dashboard.png)
 
-The dashboard has the following Chat UI, which supports text input and a history timeline.
+The dashboard will have the following Chat UI, which supports text input and a history timeline.
 
 ![](images/simplechatui.png)
 
-If you want to clear the chat history managed internally by flow context, you need to clear the flow context manually. Open the "context" tab in the right sidebar, and click the "refresh" button to get the latest data. Then, click the "Delete" button.
+To clear the chat history managed internally by flow context, you need to clear it manually. Open the "context" tab in the right sidebar, and click the "refresh" button to get the latest data. Then, click the "Delete" button.
 
 ![](images/clearcontext.png)
 
-From the next input on the Chat UI, the timeline will be cleared on the dashbaord.
+From the next input on the chat UI, the timeline will be cleared on the dashbaord.
 
 ## Integrating the Chat UI with the Ollama flow
-To integrate the two flows that we created, wire from text input node to the function node which has "post data" as the node name. 
+To integrate the two flows that we created, connect the text input node to the function node which has "post data" as the node name. 
 
 ![](images/flow4chatapp.png)
 
-After the http request node, insert a new function node between http request node and the template node to handle the retrived data. In the function node, enter "ai comment" in the name field and paste the following code.
+After the http request node, insert a new function node between the http request node and the template node to handle the retrieved data. In the function node, enter "ai comment" in the name field and then paste the following code.
 
 ```
 var tmp = flow.get('data') || [];
@@ -157,4 +157,3 @@ return msg;
 This code extracts the answer from the AI and sets it for the Chat UI. After clicking the deploy button, you can use the chat UI on dashboard.
 
 ![](images/chatapp.png)
-<!-- TODO: スクリーンショット撮り直し -->
