@@ -40,7 +40,7 @@ At this point, the initial procedure for adding the commit to the version histor
 ## (4) Modify the flow
 As an example of modifying the flow, the template node is inserted between the inject and debug nodes. To add the node to the flow, search and pick the template node from the palette, then release the node on the wire.
 
-![](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*HPyB7lqW2blEaoM8.png0)
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*HPyB7lqW2blEaoM8.png)
 
 When the inject node’s button is clicked in this flow, the template node creates a new message, “This is the payload: <timestamp>!”. Using the debug node, you can check this message in the debug tab.
 
