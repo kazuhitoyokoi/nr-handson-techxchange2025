@@ -1,6 +1,6 @@
-# Chat application with an interactive user interface and a Granite model
+# Chat Application with an Interactive User Interface and a Granite Model
 
-Node-RED can easily connect to state-of-the-art AI technologies such as Granite Model. In this tutorial, we will develop Chat application with intractive user interface and Granite Model.
+Node-RED can easily connect to state-of-the-art AI technologies such as the Granite Model. In this tutorial, we will develop a chat application with an intractive user interface and a Granite Model.
 <!--
 ## Installing Ollama (Not required in hands-on)
 To use Granite Model with Node-RED, firstly you need to install Ollama, a HTTP server to provide APIs to use AI models. To install Ollama in the Linux environment, input the following command on your terminal.
@@ -30,24 +30,23 @@ To ceate the user interface of the Chat application, Node-RED Dashboard 2.0 is n
 Select "Install" tab, to open the for the node installation. After typing the `@flowfuse/node-red-dashboard` in the search box, the target node item will be filtered on the below list. Click the `install` button of the `@flowfuse/node-red-dashboard` to install the Node-RED dashbaord 2.0 into your Node-RED environment.
 After the installation, you can see the dashboard nodes on the left palette of the Node-RED flow editor.
 -->
-## Creating Node-RED flow
-Firstly, create new project, "chat-app" using project featue.
+## Creating a Node-RED Flow
+First, create a new project, "chat-app" using the project featue.
 
 ![](images/createchatapp.png)
 
-After creating the new project for the chat application. You can start to develop the Node-RED flow.
+After creating the new project for the chat application, you can then start developing the Node-RED flow.
 
 ### Creating Node-RED flow to access Ollama server
-To create simple flow to access the Ollama server, put the inject node, function node, http request node and debug node with wires as follows.
+To create a simple flow to access the Ollama server, place the inject, function, http request and debug node with wires as shown below.
 
 ![](images/flow4ollama.png)
 
-Double-click the inject node to open node property UI. To set the prompt for Ollama server, firstly click time icon next to "millisecounds since epoch" to open the pull down menu of the data type. As the data type of `msg.payload`, select `string` from the menu. After that, you can type the string message in the text input box next to az icon.
-Type the message, "What is IBM? Describe it in 10 words."
+Double-click the inject node to open the node property UI. To set the prompt for the Ollama server, click the time icon next to "millisecounds since epoch" to open the data type pull-down menu. For the data type of `msg.payload`, select `string` from the menu. Then, type the string message, "What is IBM? Describe it in 10 words." in the text input box next to az icon.
 
 ![](images/inject4ollama.png)
 
-In the function node, input "post data" to the name field and paste the follwoing code to set POST message for Ollama server.
+In the function node, enter "post data" to the name field and then paste the following code to set the POST message for the Ollama server.
 
 ```
 msg.payload = {
@@ -63,7 +62,7 @@ return msg;
 ```
 ![](images/function4ollama.png)
 
-For http request node, the following settings are needed to select or input on the node property UI.
+For http request node, the following settings are needed to be selected or inputted on the node property UI.
 - Method: POST
 - URL:
   ```
@@ -73,23 +72,23 @@ For http request node, the following settings are needed to select or input on t
 
 ![](images/httprequest.png)
 
-The node property settings of the debug node is default. After clicking the deploy button, you can access the Ollama server by clicking the left button of the inject node.
+The debug node's node property settings are default. After clicking the deploy button, you can access the Ollama server by clicking the inject node's left button.
 
 ![](images/whatisibm.png)
 
-To check the answer from Ollama server, expand the recieved message on the debug tab. You will se the answer in the JSON path of `payload.choices[0].message.content`.
+To check the response from the Ollama server, expand the received message in the debug tab. You will se the answer in the JSON path of `payload.choices[0].message.content`.
 
-## Creating Simple Chat UI
-Node-RED dashboard supports Vuetify UI in the template node. In this matrial, we use the timeline UI provided by Vuetify to show Chat UI.
-To create simple Chat UI, place the text input node, function node and green template node in Dashboardd 2.0 with wires as follows.
+## Creating a Simple Chat UI
+Node-RED dashboard supports the Vuetify UI in the template node. In this material, we use the timeline UI provided by Vuetify to show Chat UI.
+To create a simple chat UI, place a text input node, a function node and a green template node in Dashboardd 2.0 category, connecting them with wires as shown below.
 
 ![](images/flow4simplechatui.png)
 
-On the property UI of the text input node, "Focus leave" checkbox should be turned off because Chat UI unintentionally sends to the request answer from Ollama server when switching the browser pages between dashboard UI page and Node-RED flow editor page.
+In the property UI of the text input node, the "Focus leave" checkbox should be unchecked because the chat UI unintentionally sends to a request to the Ollama server for an answer when switching between the dashboard UI page andthe  Node-RED flow editor page.
 
 ![](images/focusleave.png)
 
-Only name of the function node was changed to "user comment" to distinguish with other function node created later. In the function node, paste the following code.
+The function node name was changed to "user comment" to distinguish it from other function nodes created later. In the function node, paste the following code.
 
 ```
 var tmp = flow.get('data') || [];
@@ -106,7 +105,7 @@ return msg;
 
 ![](images/function4simplechatui.png)
 
-In the template node, replace the existing code with the following code to show Chat UI using Vuetify.
+In the template node, replace the existing code with the following code to display the chat UI using Vuetify.
 
 ```
 <template>
@@ -121,30 +120,30 @@ In the template node, replace the existing code with the following code to show 
 </template>
 ```
 
-Additionally, on the template node property UI, group should be chaned to "[Page 1] Group 1" because the selected default is none.
+Additionally, on the template node property UI, the group should be changed to "[Page 1] Group 1" because default selection is none.
 
 ![](images/template4chatui.png)
 
-To show the Chat UI on the Node-RED dashbaord 2.0, after clicking the deploy button, select the "Dashboard 2.0" tab from the right side bar area. And then click the "Open Dashboard" button on the top right.
+To show the chat UI on the Node-RED Dashbaord 2.0, click the deploy button and select the "Dashboard 2.0" tab in the right side bar area. Then, click the "Open Dashboard" button in the top right corner.
 
 ![](images/button2dashboard.png)
 
-The dashbaord has the following Chat UI which can support text input and history timeline.
+The dashboard has the following Chat UI, which supports text input and a history timeline.
 
 ![](images/simplechatui.png)
 
-If you want to clear the chat history which flow context manages internally, you need to clear the flow context manually. Open the "context" tab from the right side bar, and then click the "refresh" button to get the latest data, and click the "Delete" button.
+If you want to clear the chat history managed internally by flow context, you need to clear the flow context manually. Open the "context" tab in the right sidebar, and click the "refresh" button to get the latest data. Then, click the "Delete" button.
 
 ![](images/clearcontext.png)
 
 From the next input on the Chat UI, the timeline will be cleared on the dashbaord.
 
-## Integrating Chat UI with Ollama flow
-To integrate two flows which we created, wiring from text input node to the function node which has "post data" as the node name. 
+## Integrating the Chat UI with the Ollama flow
+To integrate the two flows that we created, wire from text input node to the function node which has "post data" as the node name. 
 
 ![](images/flow4chatapp.png)
 
-After the http request node, to handle the retrived data, new function node is inserted between http request node and template node. In the function node, input "ai comment" into the name field and paste the following code.
+After the http request node, insert a new function node between http request node and the template node to handle the retrived data. In the function node, enter "ai comment" in the name field and paste the following code.
 
 ```
 var tmp = flow.get('data') || [];
@@ -155,7 +154,7 @@ return msg;
 ```
 ![](images/function4simplechatui2.png)
 
-This code extract answer from AI, and set the answer for the Chat UI. After clicking deploy button, you can use Chat UI on dashboard.
+This code extracts the answer from the AI and sets it for the Chat UI. After clicking the deploy button, you can use the chat UI on dashboard.
 
 ![](images/chatapp.png)
 <!-- TODO: スクリーンショット撮り直し -->
