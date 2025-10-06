@@ -67,7 +67,7 @@ https://raw.githubusercontent.com/node-red/linuxinstallers/master/deb/update-nod
 ```
 ---
 # Node-RED nodes
-Many predefined and custom connectors for services and devices
+Many predefined and custom nodes for services and devices
 - Data collection
 - Machine control
 - External server access
@@ -158,8 +158,8 @@ Provides same user experience as code debugger
 # Conclusion
 - We learned the advanced features of Node-RED
   - Project feature 
-  - Flow linter
-  - Flow debugger
+  - Flow Linter
+  - Flow Debugger
 - Development example of Chat UI application
 
 -> I believe that you will develop the great flows using these features and example.
