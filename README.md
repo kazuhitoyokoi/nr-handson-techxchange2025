@@ -1,5 +1,8 @@
 # Node-RED Hands-on: Creating a Node-RED application using the project feature
 
+## QR code of this GitHub repository
+<img src="images/qrcode.png" width="200px">
+
 ## Preparations
 - [How to execute Node-RED on GitHub Codespaces](https://github.com/kazuhitoyokoi/node-red-codespaces)
 
