@@ -124,7 +124,7 @@ Additionally, on the template node property UI, the group should be changed to "
 
 ![](images/template4chatui.png)
 
-To show the chat UI on the Node-RED Dashboard 2.0, click the deploy button and then select the "Dashboard 2.0" tab in the right sidebar. Then, click the "Open Dashboard" button in the top right corner.
+To display the chat UI on the Node-RED Dashboard 2.0, click the deploy button and then select the "Dashboard 2.0" tab in the right sidebar. Then, click the "Open Dashboard" button in the top right corner.
 
 ![](images/button2dashboard.png)
 
@@ -132,7 +132,7 @@ The dashboard will have the following Chat UI, which supports text input and a h
 
 ![](images/simplechatui.png)
 
-To clear the chat history managed internally by flow context, you need to clear it manually. Open the "context" tab in the right sidebar, and click the "refresh" button to get the latest data. Then, click the "Delete" button.
+To clear the chat history managed by the flow context internally, you need to clear it manually. Open the "context" tab in the right sidebar, and click the "refresh" button to get the latest data. Then, click the "Delete" button.
 
 ![](images/clearcontext.png)
 
@@ -143,7 +143,7 @@ To integrate the two flows that we created, connect the text input node to the f
 
 ![](images/flow4chatapp.png)
 
-After the http request node, insert a new function node between the http request node and the template node to handle the retrieved data. In the function node, enter "ai comment" in the name field and then paste the following code.
+Insert a new function node between the http request node and the template node to handle the retrieved data. In the function node, enter "ai comment" in the name field, and then paste the following code.
 
 ```
 var tmp = flow.get('data') || [];
@@ -154,6 +154,6 @@ return msg;
 ```
 ![](images/function4simplechatui2.png)
 
-This code extracts the answer from the AI and sets it for the Chat UI. After clicking the deploy button, you can use the chat UI on dashboard.
+This code extracts the answer from the AI and sets it for the Chat UI. After clicking the deploy button, you can use the chat UI on the dashboard.
 
 ![](images/chatapp.png)
