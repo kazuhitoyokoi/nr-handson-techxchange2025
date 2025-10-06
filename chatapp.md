@@ -31,7 +31,11 @@ Select "Install" tab, to open the for the node installation. After typing the `@
 After the installation, you can see the dashboard nodes on the left palette of the Node-RED flow editor.
 -->
 ## Creating a Node-RED Flow
-First, create a new project, "chat-app" using the project feature.
+First, select "Projects" item on the mebu of the Node-RED flow editor, and then select the "New" to open project dialog.
+
+![](images/dialog.png)
+
+Create a new project, "chat-app" using the project feature.
 
 ![](images/createchatapp.png)
 
