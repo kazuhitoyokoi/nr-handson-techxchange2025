@@ -1,0 +1,234 @@
+[
+    {
+        "id": "77b3ec206662b769",
+        "type": "inject",
+        "z": "5902678de9fea431",
+        "name": "prompt",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "What is IBM? Describe it in 10 words.",
+        "payloadType": "str",
+        "x": 90,
+        "y": 60,
+        "wires": [
+            [
+                "72b7e9b5bedfd584"
+            ]
+        ]
+    },
+    {
+        "id": "72b7e9b5bedfd584",
+        "type": "template",
+        "z": "5902678de9fea431",
+        "name": "post data",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"messages\": [\n        {\n            \"role\": \"user\",\n            \"content\": \"{{payload}}\"\n        }\n    ],\n    \"model\": \"ibm/granite4\"\n}",
+        "output": "json",
+        "x": 180,
+        "y": 140,
+        "wires": [
+            [
+                "e5c359bd3e2c74ea"
+            ]
+        ]
+    },
+    {
+        "id": "e5c359bd3e2c74ea",
+        "type": "http request",
+        "z": "5902678de9fea431",
+        "name": "access Ollama",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:11434/v1/chat/completions",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 280,
+        "y": 60,
+        "wires": [
+            [
+                "dfa1b36db078852a"
+            ]
+        ]
+    },
+    {
+        "id": "cc882e6b2c60097c",
+        "type": "debug",
+        "z": "5902678de9fea431",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "dfa1b36db078852a",
+        "type": "change",
+        "z": "5902678de9fea431",
+        "name": "extract answer",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.choices[0].message.content",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 140,
+        "wires": [
+            [
+                "cc882e6b2c60097c",
+                "d5119ca57cc79eb4"
+            ]
+        ]
+    },
+    {
+        "id": "d5119ca57cc79eb4",
+        "type": "ui-chat",
+        "z": "5902678de9fea431",
+        "name": "",
+        "group": "66f03410406b45b1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "showAuthor": false,
+        "x": 290,
+        "y": 240,
+        "wires": [
+            [
+                "72b7e9b5bedfd584"
+            ]
+        ]
+    },
+    {
+        "id": "66f03410406b45b1",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "df769d7cfa8b3108",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default"
+    },
+    {
+        "id": "df769d7cfa8b3108",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "1fd222883be0cdfa",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "27215fa425fb4f39",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "1fd222883be0cdfa",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "27215fa425fb4f39",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "66ca232b682591fb",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard-2-ui-chat": "1.2.0",
+            "@flowfuse/node-red-dashboard": "1.29.0"
+        }
+    }
+]

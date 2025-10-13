@@ -3,9 +3,9 @@ marp: true
 theme: default
 paginate: true
 ---
-![bg cover](images/title4handson.png)
+![bg cover](images/title4session.png)
 <!--
-Hello everyone. Thank you for attending this session. This session is a Node-RED hands-on. Today, we will create a Node-RED application using the Project Feature.
+Hello everyone. Thank you for attending this session.
 -->
 ---
 # Kazuhito Yokoi
@@ -13,7 +13,9 @@ Hello everyone. Thank you for attending this session. This session is a Node-RED
 - Organizer of Node-RED User Group
 - Member of LF AI & Data Foundation Community
 
-![h:100% bg right:46%](images/openjsf.png)
+https://openjsf.org/blog/node-red-unleashed
+
+![h:100% bg right:44%](images/openjsf.png)
 <!--
 Let me introduce myself. My name is Kazuhito Yokoi. I am a contributor to the Node-RED project, and in Japan, I am one of the organizers of the Node-RED user group. In Japan, we also organize the AI and Data Foundation community. I also hold the Node-RED and data meetup in Japan with other companies. Last year, the OpenJS Foundation kindly published my blog content on the OpenJS website. If you are interested in our activities, please see the website.
 -->
@@ -136,8 +138,9 @@ Features to improve developer experiences
 - Project feature (Git functionality)
   - Managing flows
   - Tracking changes
-- Flow Linter
 - Flow Debugger
+- Flow Linter
+
 <!--
 Today, I will explain three features. The first is the Project Feature, which is based on Git functionality, and I will explain it later. After that, I will explain the Flow Linter and Flow Debugger. From now on, we will use the GitHub repository which I shared before the session. Please access that URL to proceed with our hands-on.
 -->
@@ -159,6 +162,18 @@ Project feature solves the previous issues.
 To solve this situation, we recommend the Project Feature. Firstly, the Project Feature supports switching between projects. A developer can select and switch between projects, and each project contains one application inside. The second solution is version control of the flow. In the Project Feature, Node-RED internally uses Git commands to record history. Using this standard method, a flow developer can control the version of their flow. Today, we will not be using a remote Git repository to share the Node-RED flow. But if we share the Node-RED flow to a GitHub repository, other developers can easily understand the documentation and the history of changes.
 -->
 ---
+# Flow Debugger
+Provides same user experience as code debugger
+- Creating breakpoints 
+- Pausing flows
+- Inspecting messages
+- Step by step execution
+
+![h:400 bg right:58%](images/debugger.png)
+<!--
+The Flow Debugger also provides the same user experience as a code debugger. For example, Visual Studio Code supports debugger functionality. Node-RED provides the same user interface and developer experience for its users. We can create breakpoints on the nodes. We can stop the flow, and we can inspect the messages at the breakpoints. We can also step through the flow.
+-->
+---
 # Flow Linter
 Provides real-time feedback same as code linter
 
@@ -174,25 +189,20 @@ Provides real-time feedback same as code linter
 <!--
 Next is the Flow Linter. This is the same as a general linter for other programming languages. For example, if we use JavaScript, we use ESLint, and if we use Python, we use Flake8. So, when we use Node-RED, we use the Flow Linter. The Flow Linter provides real-time feedback, same as other code linters. It alerts you to potential issues, such as an HTTP In node without an HTTP Response node, looping flows, overlapping nodes, and unset node names. If we want to create custom rules, we can create our own. For example, in our case, we created a custom rule to recommend English node names in a global company. In some cases, local people use their local language. For example, Japanese developers tend to use Japanese in comments or node names, but this linter flags custom flows that use a local language instead of English.
 -->
----
-# Flow Debugger
-Provides same user experience as code debugger
-- Creating breakpoints 
-- Pausing flows
-- Inspecting messages
-- Step by step execution
 
-<!-- TODO: injectとdebugでフローデバッガ設定の画面 -->
-![h:600 bg right:40%](images/debugger.png)
-<!--
-The Flow Debugger also provides the same user experience as a code debugger. For example, Visual Studio Code supports debugger functionality. Node-RED provides the same user interface and developer experience for its users. We can create breakpoints on the nodes. We can stop the flow, and we can inspect the messages at the breakpoints. We can also step through the flow.
--->
+---
+# Chat application with Granite model
+- Using IBM's Granite model on Ollama
+- Chat UI with Node-RED Dashboard
+
+![h:400 bg right:55%](images/chatapp2.png)
+
 ---
 # Conclusion
-- We learned the advanced features of Node-RED
+- I introduced the advanced features of Node-RED
   - Project feature 
-  - Flow Linter
   - Flow Debugger
+  - Flow Linter
 - Development example of Chat UI application
 
 -> I believe that you will develop the great flows using these features and example.
@@ -208,18 +218,3 @@ Today, we will run the advanced features of Node-RED. The first is the Project F
 https://nrcon.nodered.org/
 
 ![h:380 bg right:40%](images/nrcon.png)
-
-<!--
----
-![bg cover](images/title4session.png)
-
----
-## Setup Node-RED environment on GitHub codespaces
-
-## Simple demonstration
-
----
-# Chat application with an interactive user interface and a Granite model
-
-To realize modern factory systems, Node-RED can easily connect to the devices in the factory and state-of-the-art AI such as Granite Model. 
--->
