@@ -22,7 +22,7 @@ In flow-based development, developers sometimes create loops in the flow. This i
 ![](images/nrlint-loop.png)
 
 ## no-overlapping-nodes
-There is another issue in flow-based development. When developers place the nodes in the workspace, they sometimes put one node on the another node. In this case, the node behind the other node is not visible. In this situation, the Flow Linter shows a warning message, "Overlapping nodes" on the linter tab.
+There is another issue in flow-based development. When developers place the nodes in the workspace, they sometimes put one node on top of another node. In this case, the node behind the other node is not visible. In this situation, the Flow Linter shows a warning message, "Overlapping nodes" on the linter tab.
 
 ![](images/nrlint-overlapping.png)
 
