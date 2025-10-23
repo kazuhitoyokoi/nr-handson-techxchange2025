@@ -3,7 +3,7 @@ A code linter is a common feature in programming to check for potential errors i
 
 # Linter Rules
 ## function-eslint
-To observe Flow Linter's behavior in a function node, place a function node and write the following code in the node property of the function node.
+To observe Flow Linter's response in a function node, place a function node and write the following code in the node property of the function node.
 
 ```
 let a;
@@ -12,7 +12,7 @@ return msg;
 
 ![](images/nrlint-function.png)
 
-In this code, the variable `a` is not used. Therefore, after closing the node property UI, a warning will appear on the linter tab in the sidebar.
+In this code, the variable `a` is defined but it is not used in the following code. Therefore, after closing the node property UI, a warning will appear on the linter tab in the sidebar.
 
 ![](images/nrlint-function2.png)
 
