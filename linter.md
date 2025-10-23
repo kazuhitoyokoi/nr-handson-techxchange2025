@@ -1,5 +1,5 @@
 # Flow Linter
-A code linter is a common feature in the programming to check for potential errors in the code. For example, we use ESLint for JavaScript and Flake8 for Python. The Node-RED project also provides Flow Linter, which is same idea as the code linters. Since Node-RED is visual programming tool, Flow Linter provides error sugesstions not only for JavaScript code in function nodes but also for flow-based programming. In this material, we will focus on the both linter rules.
+A code linter is a common feature in programming to check for potential errors in the code. For example, we use ESLint for JavaScript and Flake8 for Python. The Node-RED project also provides Flow Linter, which has same features as the code linters. Since Node-RED is visual programming tool, Flow Linter provides error sugesstions not only for JavaScript code in function nodes but also for flow-based programming. In this material, we will focus on the both linter rules.
 
 # Linter Rules
 ## function-eslint
