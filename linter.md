@@ -17,7 +17,7 @@ In this code, the variable `a` is defined but it is not used in the following co
 ![](images/nrlint-function2.png)
 
 ## no-loops
-In flow-based development, developers sometimes create loops in the flow. This is similar to an infinite loop in the general programming languages. To avoid this situation, the Flow Linter notifies developers of looping flows. For example, if two function nodes create a loop, the Flow Linter tab displays a warning message, "loop detected".
+In flow-based development, developers sometimes create loops in the flow. This is similar to an infinite loop in the general programming languages. To avoid this situation, the Flow Linter notifies developers of looping flows. For example, there are two function nodes create a loop. The 1st function node sends a message to the 2nd function node directly and then, the 2nd node sends another message to the 1st function node in turn. When this happen, the Flow Linter tab displays a warning message, "loop detected".
 
 ![](images/nrlint-loop.png)
 
