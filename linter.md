@@ -12,7 +12,7 @@ return msg;
 
 ![](images/nrlint-function.png)
 
-In this code, the variable `a` is defined but it is not used in the following code. Therefore, after closing the node property UI, a warning will appear on the linter tab in the sidebar.
+In this code, the variable `a` is defined but it is not used in the following code. Therefore, after closing the node property UI, a message will appear on the linter tab in the sidebar.
 
 ![](images/nrlint-function2.png)
 
