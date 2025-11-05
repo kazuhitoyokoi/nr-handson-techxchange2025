@@ -27,14 +27,14 @@ There is another issue in flow-based development. When developers place the node
 ![](images/nrlint-overlapping.png)
 
 ## no-unconnected-http-nodes
-In the Node-RED flow editor, a pair of http-in and http response nodes is used to define an HTTP endpoint. If only an http-in node is used in the flow, the HTTP client cannot receive the response from the HTTP request. To notify developers of the missing pair, the linter tab displays the following messages.
+In the Node-RED flow editor, a pair of http-in and http response nodes is used to define an HTTP endpoint such as web server which provides web page to browser. If only an http-in node is used in the flow, the HTTP client cannot receive the HTTP response from the Node-RED server. If this happens in the GET endpoint to provide HTML file, the browser will continue to load the web page forever. To notify developers of the missing pair, the linter tab displays the following messages.
 
 ![](images/nrlint-httpinresponse.png)
 
 ## no-duplicate-http-in-urls
-In the one Node-RED environment, developers cannot define more than two REST APIs with the same endpoints. If developer defines the same endpoint such as "/api" in the two http-in nodes, the linter tab displays an alert message.
+In the one Node-RED environment, developers cannot define more than two endpoints with the same path. If developer defines the same path such as "/api" in the two http-in nodes, Node-RED handles the only one endpoint and the other duplicated endpoint will not be used in the flow. In this case, the linter tab displays an alert message.
 
 ![](images/nrlint-duplicatedhttpin.png)
 
 ## Conclusion
-Node-RED is visual programming tool that simplifies development. However, unexpected issues related to visual programming may arise. The Flow Linter is one of the tool that solves these issues.
+Node-RED is a visual programming tool that simplifies development. However, unexpected issues related to visual programming may arise. The Flow Linter is one of the useful tools that solves these issues.
