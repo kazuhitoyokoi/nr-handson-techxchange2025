@@ -22,11 +22,16 @@ Once you start the flow, the flow execution will stop at the breakpoint. Then, y
 
 ![](images/stoppingflow.png)
 
-After checking the message payload, you can click the "Resume flow" button to continue the flow execution.
+If you want to restart the flow execution from the breakpoint, click the "Resume flows" button.
 
 ![](images/restartflow.png)
 
-Alternatively, clicking the "Step flow" button (next to the "Resume flow") will send the message to next node one by one.
+Alternatively, you can click the "Step flows" button next to the "Resume flows".
+Without manually adding breakpoints at every ports, you can observe each message in the virtual breakpoints by clicking "Resume flows" button.
+Using the "Resume flows" button, the Flow Debugger copies the situation by adding breakpoints to all of the ports after the actual breakpoint.
+
+# Benefit of Flow Debugger
+This tutorial explained how to use the Flow Debugger. Without the Flow Debugger, developers tend to use the debug node to check the `msg.payload` data. However, using the debug node requires changing the flow. Therefore, undoing and redoing can be a bit troublesome. In terms of the Git version history, committing the placement of a debug node in the flow is unrelated to the flow logic. With the flow debugger, developers can check the message payload without changing the flow.
 
 # Conclusion
-This tutorial explained how to use the flow debugger. Without the flow debugger, developers tend to use the debug node to check the message payload. However, using the debug node requires changing the flow. Therefore, undoing and redoing can be a bit troublesome. In terms of the Git version history, committing the placement of a debug node in the flow is unrelated to the flow logic. With the flow debugger, developers can check the message payload without changing the flow.
+xxx
