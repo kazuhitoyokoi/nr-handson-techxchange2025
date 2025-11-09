@@ -32,10 +32,7 @@ Alternatively, you can click the "Step flows" button next to the "Resume flows".
 Without manually adding breakpoints at every ports, you can observe each message in the virtual breakpoints by clicking "Resume flows" button.
 Using the "Resume flows" button, the Flow Debugger copies the situation by adding breakpoints to all of the ports after the actual breakpoint.
 
-# Benefit of Flow Debugger
+# Conclusion
 This tutorial explained how to use the Flow Debugger. Without the Flow Debugger, developers tend to use the debug node to check the `msg.payload` data. However, using the debug node requires changing the flow. Therefore, undoing and redoing can be a bit troublesome. In terms of the Git version history, committing the placement of a debug node in the flow is unrelated to the flow logic. With the flow debugger, developers can check the message payload without changing the flow.
 
-# Conclusion
-The Flow Debugger is a powerful tool for fixing problems in your flow.
-Instead of adding and removing debug nodes, you can use breakpoints to pause the flow at any port.
-This lets you check message data directly without changing your flow, allowing for a much faster and cleaner debugging process.
+The Flow Debugger is a powerful tool for fixing problems in your flow. Instead of adding and removing debug nodes, you can use breakpoints to pause the flow at any port. This lets you check message data directly without changing your flow, allowing for a much faster and cleaner debugging process.
