@@ -1,8 +1,8 @@
 # Chat Application with an Interactive User Interface and a Granite Model
 
 Node-RED can easily connect to state-of-the-art AI technologies, such as the Granite Model. In this tutorial, we will develop a chat application with an interactive user interface and a Granite Model.
-<!--
-## Installing Ollama (Not required in hands-on)
+
+## Installing Ollama
 To use Granite Model with Node-RED, firstly you need to install Ollama, a HTTP server to provide APIs to use AI models. To install Ollama in the Linux environment, input the following command on your terminal.
 
 ```
@@ -23,13 +23,13 @@ ollama serve
 
 Now, on your PC, the REST API has been available. This REST API is compatible API of the OpenAI. Therefore, we can use the common way to connect to the REST API.
 
-### Installing Node-RED dashbaord 2.0 (Not required in the hands-on)
+## Installing Node-RED dashbaord 2.0
 
 To ceate the user interface of the Chat application, Node-RED Dashboard 2.0 is needed. To install Node-RED 2.0, open the "User Settings" from the "Manage Palette" of the top-right menu in the Node-RED flow editor. 
 
 Select "Install" tab, to open the for the node installation. After typing the `@flowfuse/node-red-dashboard` in the search box, the target node item will be filtered on the below list. Click the `install` button of the `@flowfuse/node-red-dashboard` to install the Node-RED dashbaord 2.0 into your Node-RED environment.
 After the installation, you can see the dashboard nodes on the left palette of the Node-RED flow editor.
--->
+
 ## Creating a Node-RED Flow
 First, select "Projects" item on the mebu of the Node-RED flow editor, and then select the "New" to open project dialog.
 
