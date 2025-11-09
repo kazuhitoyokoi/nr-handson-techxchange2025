@@ -1,5 +1,5 @@
 # Flow Debugger
-A code debugger is also a common tool for general programming languages. When using Visual Studio Code for Python programming, breakpoints are set in lines of code. And then, we can investigate the variables at these breakpoints while the code executes.
+A code debugger is a common tool for general programming languages. When using Visual Studio Code for Python programming, breakpoints are set in lines of code. And then, we can investigate the variables at these breakpoints while the code executes.
 
 ![](images/debugger4vscode.png)
 
