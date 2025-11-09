@@ -6,7 +6,7 @@ A code debugger is a common tool for general programming languages. When using V
 The Flow Debugger provides the same developer experience for the Node-RED flow editor. This tutorial explains how to use the flow debugger.
 
 ## Enabling the Flow Debugger
-By default, the Flow Debugger is disabled in the flow editor. To activate the Flow Debugger, developers need to open the debugger tab in the right sidebar and then turn on the debugger by clicking the switch marked "Enabled".
+By default after installation of the flow debugger, the Flow Debugger is disabled in the flow editor. To activate the Flow Debugger, developers need to open the debugger tab in the right sidebar and then turn on the debugger by clicking the switch marked "Enabled".
 
 ![](images/enabling-debugger.png)
 
